@@ -37,3 +37,23 @@ for i in range(0, len(leet_string)):
     final_string += current_letter
 
 print final_string
+
+# long-long vowels
+
+vowels = {
+    "a" : "aaaaa",
+    "e" : "eeeee",
+    "i" : "iiiii",
+    "o" : "ooooo",
+    "u" : "uuuuu"
+}
+
+long_vowel_string = ""
+
+for i in range(0,len(my_string)):
+    current_letter = my_string[i]
+    if current_letter in vowels:
+        current_letter = vowels[current_letter]
+    long_vowel_string += current_letter
+
+print long_vowel_string
