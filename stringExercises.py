@@ -9,6 +9,20 @@ print my_string.capitalize()
 # Reverse a string
 print my_string[::-1]
 
+list_string = list(my_string)
+list_string.reverse()
+
+print "".join(list_string)
+
+lengthOfString = len(my_string)
+print lengthOfString
+
+reversed_string = ""
+
+for i in range (0, lengthOfString):
+    reversed_string += my_string[lengthOfString - (i+1)]
+    print reversed_string
+
 # Leetspeak
 
 #with replace
@@ -52,9 +66,11 @@ long_vowel_string = ""
 
 for i in range(0,len(my_string)):
     current_letter = my_string[i]
-    if current_letter in vowels:
-        current_letter = vowels[current_letter]
-    long_vowel_string += current_letter
+    nextLetter = my_string[i+1]
+    if(current_letter == nextLetter) and (i != len(my_string) -1):
+        if current_letter in vowels:
+            current_letter = vowels[current_letter]
+            long_vowel_string += current_letter
 
 print long_vowel_string
 
